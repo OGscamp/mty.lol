@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 function App() {
   const [riotID, setRiotID] = useState("");
@@ -29,15 +30,15 @@ function App() {
     }
 
     try {
-      const puuidResponse = await fetch(`/api/riot/puuid/${gameName}/${tagLine}`);
+      const puuidResponse = await fetch(`${backendUrl}/api/riot/puuid/${gameName}/${tagLine}`);
       const puuid = await puuidResponse.json();
 
-      const matchHistoryResponse = await fetch(`/api/riot/match-history/${puuid}`);
+      const matchHistoryResponse = await fetch(`${backendUrl}/api/riot/match-history/${puuid}`);
       const matchIds = await matchHistoryResponse.json();
 
       const matches = await Promise.all(
         matchIds.map(async (matchId) => {
-          const matchDetailResponse = await fetch(`/api/riot/match-details/${matchId}`);
+          const matchDetailResponse = await fetch(`${backendUrl}/api/riot/match-details/${matchId}`);
           const matchData = await matchDetailResponse.json();
           const userMatchData = matchData.info.participants.find(p => p.puuid === puuid);
 
@@ -109,7 +110,7 @@ function App() {
     <div className="p-10">
       <h1 className="relative flex justify-center py-20 mt-2 mb-1 text-8xl bg-cover bg-[center_30%] font-extrabold rounded-3xl border bg-[url('..\\public\\Talon_0.jpg')] text-white">
         <div className="absolute inset-0 bg-black opacity-50 rounded-3xl border"></div>
-        <span className="relative z-10">LOI.GG</span>
+        <span className="relative z-10">MTY.LOL</span>
       </h1>
 
       <section className="flex flex-col items-center py-20 px-30 text-2xl">
