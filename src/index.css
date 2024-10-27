@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-navy-blue;
+    @apply font-NTR;
+    @apply bg-cover bg-[url('..\public\blue_aura_slow_movement.gif')];
+    background-attachment: fixed;
+  }
+
