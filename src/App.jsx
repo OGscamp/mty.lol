@@ -108,7 +108,7 @@ function App() {
 
   return (
     <div className="p-10">
-      <h1 className="relative flex justify-center py-20 mt-2 mb-1 text-8xl bg-cover bg-[center_30%] font-extrabold rounded-3xl border bg-[url('..\\public\\Talon_0.jpg')] text-white">
+      <h1 className="relative flex justify-center py-20 mt-2 mb-1 text-8xl bg-cover bg-[center_30%] font-extrabold rounded-3xl border bg-[url('\Talon_0.jpg')] text-white">
         <div className="absolute inset-0 bg-black opacity-50 rounded-3xl border"></div>
         <span className="relative z-10">MTY.LOL</span>
       </h1>
