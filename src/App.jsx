@@ -109,7 +109,7 @@ function App() {
     <div className="p-10">
       <h1 className="relative flex justify-center py-20 mt-2 mb-1 text-8xl bg-cover bg-[center_30%] font-extrabold rounded-3xl border bg-[url('..\\public\\Talon_0.jpg')] text-white">
         <div className="absolute inset-0 bg-black opacity-50 rounded-3xl border"></div>
-        <span className="relative z-10">LUU.GG</span>
+        <span className="relative z-10">LOI.GG</span>
       </h1>
 
       <section className="flex flex-col items-center py-20 px-30 text-2xl">
