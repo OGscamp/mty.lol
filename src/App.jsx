@@ -177,7 +177,7 @@ function App() {
                                   className="w-[3vw] h-[3vw]"
                                 />
                                 <span className="text-[2vw] w-[6vw]">{ally.champion}</span>
-                                <span className="font-semibold flex-1 pl-6">{ally.summonerName || "Hidden"}</span>
+                                <span className="font-semibold flex-1 pl-20">{ally.summonerName || "Hidden"}</span>
                                 <div className="flex space-x-[0.5vw] ml-auto">
                                   {ally.items.map((item, idx) => (
                                     <img
@@ -204,7 +204,7 @@ function App() {
                                   className="w-[3vw] h-[3vw]"
                                 />
                                 <span className="text-[2vw] w-[6vw]">{enemy.champion}</span>
-                                <span className="font-semibold flex-1 pl-6">{enemy.summonerName || "Hidden"}</span>
+                                <span className="font-semibold flex-1 pl-20">{enemy.summonerName || "Hidden"}</span>
                                 <div className="flex space-x-[0.5vw] ml-auto">
                                   {enemy.items.map((item, idx) => (
                                     <img
