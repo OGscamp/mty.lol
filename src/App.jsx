@@ -69,13 +69,25 @@ function App() {
             day: "2-digit"
           });
 
+          // Mapping queue IDs to descriptive names
+          const queueTypeMap = {
+            0: "Custom",
+            400: "Normal Draft",
+            420: "Ranked Solo/Duo",
+            430: "Normal Blind Pick",
+            440: "Ranked Flex",
+            450: "ARAM",
+          };
+
+          const queueType = queueTypeMap[matchData.info.queueId] || "Classic";
+
           return {
             matchId,
             matchDate,
             champion: userMatchData.championName,
             result: userMatchData.win ? "Win" : "Loss",
             items,
-            gameMode: matchData.info.gameMode,
+            gameMode: queueType,
             allies,
             enemies,
           };
